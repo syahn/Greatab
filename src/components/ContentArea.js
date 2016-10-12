@@ -7,7 +7,7 @@ const defaultProps = {
 
 };
 
-class LeftCol extends Component {
+class ContentArea extends Component {
 
     constructor(props) {
         super(props);
@@ -15,12 +15,12 @@ class LeftCol extends Component {
 
     render() {
         return(
-            <div>LeftCol</div>
+            <div>ContentArea</div>
         );
     }
 }
 
-LeftCol.propTypes = propTypes;
-LeftCol.defaultProps = defaultProps;
+ContentArea.propTypes = propTypes;
+ContentArea.defaultProps = defaultProps;
 
-export default LeftCol;
+export default ContentArea;

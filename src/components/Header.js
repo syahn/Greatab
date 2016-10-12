@@ -11,9 +11,11 @@ class Header extends Component {
 
     render() {
         return(
-          <div className="App-header">
-            <div>Header</div>
-          </div>
+          <header className="header">
+            <div className="header__wrapper">
+              <div>Header</div>
+            </div>
+          </header>
         );
     }
 }

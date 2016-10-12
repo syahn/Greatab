@@ -1,5 +1,12 @@
+$header-height: 128px;
+$sticky-header-height: 56px;
+
+
 .App {
   text-align: center;
+  background-color: #E9EBEE;
+  box-sizing: border-box;
+
 }
 
 .App-logo {
@@ -7,24 +14,80 @@
   height: 80px;
 }
 
-body {
-  background-color: #E9EBEE;
-}
 
-.App-header {
-  background-color: #3B5998;
-  border-bottom: 1px solid #294B7d;
-  height: 43px;
-  min-width: 100%;
-
+header {
+  background-color: #26A69A; /*a400*/
+  height:115px;
+  /*padding-top: 73px;*/
+  left:0;
+  right:0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+  position: fixed;
+  z-index: 1;
+  top: -72px;
   color: white;
 }
 
-.App-intro {
-  font-size: large;
+
+.add-note {
+  background-color: #fdfdfd;
+
+  border: 1px solid #ccc;
 }
 
-@keyframes App-logo-spin {
+.notes {
+  margin: 0.5em;
+  padding-left: 0;
+
+  max-width: 10em;
+  list-style: none;
+}
+
+.note {
+  /*이거왜?*/
+  overflow: auto;
+
+  margin-bottom: 0.5em;
+  padding: 0.5em;
+
+  background-color: #fdfdfd;
+  box-shadow: 0 0 0.3em .03em rgba(0,0,0,.3);
+}
+.note:hover {
+  box-shadow: 0 0 0.3em .03em rgba(0,0,0,.7);
+  transition: .6s;
+}
+
+.note .value {
+  display: inline-block;
+}
+
+.note .editable {
+  /*이것도 왜?*/
+  float: left;
+}
+
+
+.note .delete {
+  float: right;
+
+  padding: 0;
+
+  background-color: #fdfdfd;
+  border: none;
+
+  cursor: pointer;
+
+  visibility: hidden;
+}
+
+.note:hover .delete {
+  visibility: visible;
+}
+
+
+
+/*@keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
-}
+}*/
