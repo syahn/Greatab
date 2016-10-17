@@ -16,9 +16,8 @@ $sticky-header-height: 56px;
 
 
 header {
-  background-color: #26A69A; /*a400*/
+  background-color: #26A69A;
   height:115px;
-  /*padding-top: 73px;*/
   left:0;
   right:0;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
@@ -44,7 +43,7 @@ header {
 }
 
 .note {
-  /*이거왜?*/
+
   overflow: auto;
 
   margin-bottom: 0.5em;
@@ -63,7 +62,7 @@ header {
 }
 
 .note .editable {
-  /*이것도 왜?*/
+
   float: left;
 }
 
@@ -87,7 +86,7 @@ header {
 
 
 
-/*@keyframes App-logo-spin {
+@keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
-}*/
+}
