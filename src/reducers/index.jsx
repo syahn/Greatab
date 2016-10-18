@@ -1,11 +1,10 @@
+import { combineReducers } from 'redux'
+import todos from './todos'
+import visibilityFilter from './visibilityFilter'
 
-import { combineReducers } from 'redux';
-import airports from './airports';
-import route from './route';
+const todoApp = combineReducers({
+  todos,
+  visibilityFilter
+})
 
-const rootReducer = combineReducers({
-  airports,
-  route
-});
-
-export default rootReducer;
+export default todoApp

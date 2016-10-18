@@ -12,9 +12,7 @@ class Header extends Component {
     render() {
         return(
           <header className="header">
-            <div className="header__wrapper">
-              <div>Header</div>
-            </div>
+            <span className="logo">Greatab</span>
           </header>
         );
     }
