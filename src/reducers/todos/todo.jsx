@@ -27,6 +27,15 @@ function updateItemInArray(array, itemId, updateItemCallback) {
     return updatedItems;
 }
 
+function deleteItemInArray(array, itemId) {
+    const updatedArrays = array.filter(item => {
+          return item.id !== itemId;
+        }
+    );
+
+    return updatedArrays;
+}
+
 function createReducer(initialState, handlers) {
   return function reducer(state = initialState, action) {
     if (handlers.hasOwnProperty(action.type)) {
@@ -48,6 +57,7 @@ function setVisibilityFilter(visibilityState, action) {
 export const visibilityReducer = createReducer('SHOW_ALL', {
     'SET_VISIBILITY_FILTER' : setVisibilityFilter
 });
+
 
 // Case reducer
 function addTodo(todosState, action) {
@@ -71,11 +81,7 @@ function toggleTodo(todosState, action) {
 
 // Case reducer
 function deleteTodo(todosState, action) {
-    const newTodos = updateItemInArray(todosState, action.id, todo => {
-        return updateObject(todo, {text : action.text});
-    });
-
-    return newTodos;
+    return deleteItemInArray(todosState, action.id);
 }
 
 // Slice reducer
