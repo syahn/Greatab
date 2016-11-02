@@ -1,24 +1,24 @@
-import { connect } from 'react-redux'
-import { setVisibilityFilter } from '../actions/TodoActionCreators'
+import {connect} from 'react-redux'
+import {setVisibilityFilter} from '../actions/TodoActionCreators'
 import Link from '../components/todos/Link'
 
+// FilterLink gets the current visibility filter and renders a Link.
+// filter: string is the visibility filter it represents.
+
 const mapStateToProps = (state, ownProps) => {
-  return {
-    active: ownProps.filter === state.visibilityFilter
-  }
+    return {
+        active: ownProps.filter === state.visibilityFilter
+    }
 }
 
 const mapDispatchToProps = (dispatch, ownProps) => {
-  return {
-    onClick: () => {
-      dispatch(setVisibilityFilter(ownProps.filter))
+    return {
+        onClick: () => {
+            dispatch(setVisibilityFilter(ownProps.filter))
+        }
     }
-  }
 }
 
-const FilterLink = connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(Link)
+const FilterLink = connect(mapStateToProps, mapDispatchToProps)(Link)
 
 export default FilterLink

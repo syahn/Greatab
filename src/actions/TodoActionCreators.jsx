@@ -25,6 +25,13 @@ export const toggleTodo = (id) => {
   }
 }
 
+export const deleteTodo = (id) => {
+  return {
+    type: 'DELETE_TODO',
+    id
+  }
+}
+
 // const TodoActionCreators = {
 //   addTodo(text) {
 //     return {

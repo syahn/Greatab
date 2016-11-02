@@ -1,15 +1,15 @@
 import React, { Component } from 'react'
 import { createStore } from 'redux'
-import { Provider, connect } from 'react-redux'
+import { Provider } from 'react-redux'
 
-import todoApp from './reducers/index'
+import Reducer from './reducers/index'
+
 import AppTodo from './components/todos/AppTodo'
 import Header from './components/Header'
 
 import './App.css';
 
-let store = createStore(todoApp);
-
+let store = createStore(Reducer);
 
 export default class App extends Component {
 
@@ -21,7 +21,8 @@ export default class App extends Component {
           <nav className="leftCol"></nav>
           <main className="content">
             <article className="contentArea">
-              <div className="card card__feed"></div>
+              <div className="card card__feed">
+              </div>
             </article>
             <section className="rightCol">
               <Provider store={store}>
