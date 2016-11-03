@@ -26,7 +26,7 @@ const mapDispatchToProps = (dispatch) => {
   return {
     onTodoClick: (id) => {
       dispatch(toggleTodo(id))
-    }, 
+    },
     onDeleteClick: (id) => {
       dispatch(deleteTodo(id))
     },

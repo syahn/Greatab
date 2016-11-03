@@ -23,7 +23,6 @@ function updateItemInArray(array, itemId, updateItemCallback) {
         const updatedItem = updateItemCallback(item);
         return updatedItem;
     });
-
     return updatedItems;
 }
 
@@ -32,7 +31,6 @@ function deleteItemInArray(array, itemId) {
           return item.id !== itemId;
         }
     );
-
     return updatedArrays;
 }
 
@@ -90,6 +88,8 @@ export const todosReducer = createReducer([], {
     'TOGGLE_TODO' : toggleTodo,
     'DELETE_TODO' : deleteTodo
 });
+
+
 
 // // "Root reducer"
 // const rootReducer = combineReducers({

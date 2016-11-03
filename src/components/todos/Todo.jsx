@@ -9,14 +9,19 @@ import React, { PropTypes } from 'react'
 const Todo = ({ onClick, onDelete, completed, text }) => (
 
   <li
-
-    onClick={onClick}
     style={{
       textDecoration: completed ? 'line-through' : 'none'
     }}
   >
-    <input type="checkbox" />
+    <input
+      type="checkbox"
+      className="todo__checkbox"
+      defaultChecked={completed}
+      onClick={onClick}
+    />
+
     {text}
+
     <button
       className="delete"
       onClick={onDelete}
