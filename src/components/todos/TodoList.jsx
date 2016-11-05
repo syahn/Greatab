@@ -13,7 +13,6 @@ const TodoList = ({ todos, onTodoClick, onDeleteClick, onEditClick, onEditActiva
       <Todo
         key={todo.id}
         id={todo.id}
-        className="todo__item"
         {...todo}
         onToggle={() => onTodoClick(todo.id)}
         onDelete={() => onDeleteClick(todo.id)}

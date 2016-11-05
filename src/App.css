@@ -142,19 +142,36 @@ button {
 }
 
 .todo__items li {
+  font-size: 12px;
+
+  width: 225px;
+  margin-top: 2px;
+}
+
+.todo__items li span{
+  display: block;
+  width: 200px;
+  border-bottom: 1px solid rgba(0,0,0,.12);
+}
+
+.todo__item {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  font-size: 12px;
-  padding-left: 23px;
-  width: 225px;
-  margin-top: 2px;
+  width: 243px;
+  margin: 0 auto;
+  padding-left: 24px;
 }
 
 .todo__text {
   width: 200px;
   border-bottom: 1px solid rgba(0,0,0,.12);
   margin-left: 3px;
+}
+
+.todo__editInput {
+  outline: none;
+  width: 200px;
 }
 
 

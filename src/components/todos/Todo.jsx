@@ -8,13 +8,7 @@ import Editable from './Editable'
 // onClick() is a callback to invoke when a todo is clicked.
 
 const Todo = ({ onEditActivate, onToggle, onDelete, onEdit, completed, editing, text,id }) => (
-
-  <li
-    onClick={onEditActivate}
-    style={{
-      textDecoration: completed ? 'line-through' : 'none'
-    }}
-  >
+  <div className="todo__item">
     <input
       type="checkbox"
       className="todo__checkbox"
@@ -22,12 +16,19 @@ const Todo = ({ onEditActivate, onToggle, onDelete, onEdit, completed, editing, 
       onClick={onToggle}
     />
 
-    <Editable
-      editing={editing}
-      onEdit={onEdit}
-      text={text}
-      id={id}
-    />
+    <li
+      onClick={onEditActivate}
+      style={{
+        textDecoration: completed ? 'line-through' : 'none'
+      }}
+    >
+      <Editable
+        editing={editing}
+        onEdit={onEdit}
+        text={text}
+        id={id}
+      />
+    </li>
 
     <button
       className="todo__delete"
@@ -35,7 +36,7 @@ const Todo = ({ onEditActivate, onToggle, onDelete, onEdit, completed, editing, 
     >
       x
     </button>
-  </li>
+  </div>
 )
 
 Todo.propTypes = {

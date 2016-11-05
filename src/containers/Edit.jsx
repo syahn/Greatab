@@ -9,6 +9,7 @@ import { connect } from 'react-redux'
 
       return <input
         type="text"
+        className="todo__editInput"
         autoFocus={true}
         defaultValue={text}
         onBlur={onEdit}
