@@ -4,7 +4,7 @@ import FilterLink from '../../containers/FilterLink'
 // Footer is where we let the user change currently visible todos.
 
 const Footer = () => (
-  <p>
+  <p className="todo__footer">
     Show:
     {" "}
     <FilterLink filter="SHOW_ALL">

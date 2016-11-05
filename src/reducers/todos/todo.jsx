@@ -12,6 +12,12 @@ function updateObject(oldObject, newValues) {
     return Object.assign({}, oldObject, newValues);
 }
 
+function updateObject(oldObject, newValues) {
+    // Encapsulate the idea of passing a new object as the first parameter
+    // to Object.assign to ensure we correctly copy data instead of mutating
+    return Object.assign({}, oldObject, newValues);
+}
+
 function updateItemInArray(array, itemId, updateItemCallback) {
     const updatedItems = array.map(item => {
         if(item.id !== itemId) {
@@ -82,11 +88,31 @@ function deleteTodo(todosState, action) {
     return deleteItemInArray(todosState, action.id);
 }
 
+// Case reducer
+function editTodo(todosState, action) {
+  const newTodos = updateItemInArray(todosState, action.id, todo => {
+      return updateObject(todo, {text : action.text, editing:!todo.editing});
+  });
+
+  return newTodos;
+}
+
+// Case reducer
+function editActivateTodo(todosState, action) {
+  const newTodos = updateItemInArray(todosState, action.id, todo => {
+      return updateObject(todo, {editing : !todo.editing});
+  });
+
+  return newTodos;
+}
+
 // Slice reducer
 export const todosReducer = createReducer([], {
     'ADD_TODO' : addTodo,
     'TOGGLE_TODO' : toggleTodo,
-    'DELETE_TODO' : deleteTodo
+    'DELETE_TODO' : deleteTodo,
+    'EDIT_TODO' : editTodo,
+    'EDIT_ACTIVATE_TODO' : editActivateTodo
 });
 
 

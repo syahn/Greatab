@@ -2,14 +2,13 @@ import React, { Component } from 'react'
 import { createStore } from 'redux'
 import { Provider } from 'react-redux'
 
-import Reducer from './reducers/index'
-
 import AppTodo from './components/todos/AppTodo'
 import Header from './components/Header'
 
+import store from './stores/index'
 import './App.css';
 
-let store = createStore(Reducer);
+
 
 export default class App extends Component {
 

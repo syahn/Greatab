@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import { toggleTodo, deleteTodo } from '../actions/TodoActionCreators'
+import { toggleTodo, deleteTodo, editTodo, editActivateTodo } from '../actions/TodoActionCreators'
 import TodoList from '../components/todos/TodoList'
 
 // VisibleTodoList that subscribes to the Redux store and knows how to apply the current visibility filter.
@@ -30,7 +30,12 @@ const mapDispatchToProps = (dispatch) => {
     onDeleteClick: (id) => {
       dispatch(deleteTodo(id))
     },
-
+    onEditClick: (id, text) => {
+      dispatch(editTodo(id, text))
+    },
+    onEditActivateClick: (id) => {
+      dispatch(editActivateTodo(id))
+    }
   }
 }
 

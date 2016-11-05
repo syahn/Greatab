@@ -6,20 +6,26 @@ import Todo from './Todo'
 // todos: Array is an array of todo items with { id, text, completed } shape.
 // onTodoClick(id: number) is a callback to invoke when a todo is clicked.
 
-const TodoList = ({ todos, onTodoClick, onDeleteClick }) => (
+const TodoList = ({ todos, onTodoClick, onDeleteClick, onEditClick, onEditActivateClick }) => (
 
-  <ul>
+  <ul className="todo__items">
     {todos.map(todo =>
       <Todo
         key={todo.id}
+        id={todo.id}
+        className="todo__item"
         {...todo}
-        onClick={() => onTodoClick(todo.id)}
+        onToggle={() => onTodoClick(todo.id)}
         onDelete={() => onDeleteClick(todo.id)}
+        onEdit={(text) => onEditClick(todo.id, text)}
+        onEditActivate={() => onEditActivateClick(todo.id)}
       />
     )}
   </ul>
 )
 
+
+// TODO
 TodoList.propTypes = {
   todos: PropTypes.arrayOf(PropTypes.shape({
     id: PropTypes.number.isRequired,

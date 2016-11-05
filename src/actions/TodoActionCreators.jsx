@@ -3,6 +3,7 @@ import uuid from 'uuid';
 // import { ADD_TODO } from '../constants';
 
 let nextTodoId = 0
+
 export const addTodo = (text) => {
   return {
     type: 'ADD_TODO',
@@ -28,6 +29,21 @@ export const toggleTodo = (id) => {
 export const deleteTodo = (id) => {
   return {
     type: 'DELETE_TODO',
+    id
+  }
+}
+
+export const editTodo = (id,text) => {
+  return {
+    type: 'EDIT_TODO',
+    id,
+    text
+  }
+}
+
+export const editActivateTodo = (id) => {
+  return {
+    type: 'EDIT_ACTIVATE_TODO',
     id
   }
 }
