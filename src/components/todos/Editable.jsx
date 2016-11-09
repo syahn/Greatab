@@ -6,7 +6,7 @@ const Editable = ({onEdit, editing, text}) => {
   if(editing) {
     return <Edit text={text} onEdit={onEdit} />;
   }
-  return <span >{text}</span>;
+  return <span className="todo__editDefault">{text}</span>;
 }
 
 

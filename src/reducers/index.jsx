@@ -1,11 +1,13 @@
 import { combineReducers } from 'redux'
 import { todosReducer, visibilityReducer} from './todos/todo'
-import { reducer as formReducer } from 'redux-form'
+import { selectedReddit, postsByReddit} from './feeds/feed'
+
 
 const Reducer = combineReducers({
   visibilityFilter : visibilityReducer,
   todos : todosReducer,
-  form : formReducer
+  selectedReddit,
+  postsByReddit
 })
 
 export default Reducer
