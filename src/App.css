@@ -4,6 +4,7 @@ html, body {
   margin: 0;
   padding: 0;
   height: 100%;
+  background-color: #FAFAFA;
   color: #1d2129;
   line-height: 1.34;
 }
@@ -39,8 +40,7 @@ button {
 
 
 .app {
-  height: 1000px;
-  background-color: #FAFAFA;
+  height: 100%;
   text-align: center;
   box-sizing: border-box;
 }
@@ -63,7 +63,7 @@ button {
 }
 
 .mainContainer {
-  width: 85%;
+  width: 90%;
   display: flex;
   position: relative;
   margin: 0 auto;
@@ -82,6 +82,7 @@ button {
 
 .leftCol {
   width: 180px;
+  padding-top: 11px;
   padding-right: 10px;
 }
 
@@ -89,7 +90,7 @@ button {
 /*Content Area*/
 
 .contentArea {
-  width: 502px;
+  width: 70%;
   /*border: 1px solid gray;*/
   padding-right: 10px;
 }
@@ -110,7 +111,8 @@ button {
 }
 
 .card__feed {
-  height: 200px;
+  text-align: left;
+  padding: 2em;
 }
 
 

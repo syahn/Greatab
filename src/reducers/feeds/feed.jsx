@@ -4,7 +4,6 @@ import {
 } from '../../actions/feed/reddit'
 
 
-
 const posts = (state = {
   isFetching: false,
   didInvalidate: false,

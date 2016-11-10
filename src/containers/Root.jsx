@@ -3,9 +3,10 @@ import { createStore } from 'redux'
 import { Provider } from 'react-redux'
 
 import AppTodo from '../components/todos/AppTodo'
-import Header from '../components/Header'
+import Header from '../components/header/Header'
 
 import AsyncApp from './AsyncApp'
+import FeedSelect from './FeedSelect'
 
 import '../App.css';
 
@@ -16,7 +17,9 @@ export default class Root extends Component {
       <div className="app">
         <Header className="header"/>
         <section className="mainContainer">
-          <nav className="leftCol"></nav>
+          <nav className="leftCol">
+            <FeedSelect />
+          </nav>
           <main className="content">
             <article className="contentArea">
               <div className="card card__feed">

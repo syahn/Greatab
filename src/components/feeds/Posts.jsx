@@ -5,7 +5,11 @@ export default class Posts extends Component {
     return (
       <ul>
         {this.props.posts.map((post, i) =>
-          <li key={i}>{post.title}</li>
+          <li key={i}>
+            <a target="_blank" href={post.url}>{post.title}</a>
+
+            <span> &#8682; {post.ups}</span>
+          </li>
         )}
       </ul>
     )
