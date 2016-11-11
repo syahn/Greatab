@@ -1,6 +1,6 @@
 
 html, body {
-  font-family: 'Roboto Mono','Roboto', 'Helvetica', sans-serif;
+  font-family: 'Roboto', 'Helvetica', sans-serif;
   margin: 0;
   padding: 0;
   height: 100%;
@@ -74,25 +74,8 @@ button {
   width: 100%;
   display: flex;
   flex-direction: rox;
-  padding-left: 11px;
-  padding-top: 11px;
-}
-
-/*Left Control*/
-
-.leftCol {
-  width: 180px;
-  padding-top: 11px;
-  padding-right: 10px;
-}
-
-
-/*Content Area*/
-
-.contentArea {
-  width: 70%;
-  /*border: 1px solid gray;*/
-  padding-right: 10px;
+  padding-left: 1em;
+  padding-top: 1em;
 }
 
 /*Cards*/
@@ -105,15 +88,38 @@ button {
   border-color: #e5e6e9 #dfe0e4 #d0d1d5;
 }
 
-.card__todo {
-  padding: 20px;
-  max-width: 273px;
+
+/*Left Control*/
+
+.leftCol {
+  width: 180px;
+  padding-top: 1em;
+  padding-right: 10px;
 }
+
+
+
+
+
+
+/*Content Area*/
+
+.contentArea {
+  width: 70%;
+  /*border: 1px solid gray;*/
+  padding-right: 10px;
+}
+
+/*Feed*/
 
 .card__feed {
   text-align: left;
   padding: 2em;
 }
+
+
+
+
 
 
 
@@ -123,11 +129,36 @@ button {
   width: 310px;
 }
 
-/*Todo*/
-.todo__form {
+
+/*Weather*/
+
+.card__weather {
+  margin-bottom: 1em;
+  text-align: left;
+  padding: 1em;
+}
+
+.card__weather h4{
+  margin-top: 0;
+}
+
+.time__weather {
+  text-align: right;
+  display: block;
 }
 
 
+
+/*Todo*/
+
+.card__todo {
+  padding: 20px;
+  max-width: 273px;
+}
+
+
+.todo__form {
+}
 
 .todo__input {
   width: 200px;
@@ -190,6 +221,7 @@ button {
 .todo__footer {
   font-size: 10px;
 }
+
 
 
 

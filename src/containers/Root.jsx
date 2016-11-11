@@ -2,8 +2,9 @@ import React, { Component } from 'react'
 import { createStore } from 'redux'
 import { Provider } from 'react-redux'
 
-import AppTodo from '../components/todos/AppTodo'
+import Todo from '../components/todos/AppTodo'
 import Header from '../components/header/Header'
+import Weather from './weather/AppWeather'
 
 import AsyncApp from './AsyncApp'
 import FeedSelect from './FeedSelect'
@@ -23,11 +24,13 @@ export default class Root extends Component {
           <main className="content">
             <article className="contentArea">
               <div className="card card__feed">
+              
                 <AsyncApp />
               </div>
             </article>
             <section className="rightCol">
-              <AppTodo />
+              <Weather />
+              <Todo />
             </section>
           </main>
         </section>

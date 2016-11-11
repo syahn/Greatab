@@ -44,7 +44,7 @@ class FeedSelect extends Component {
       <div>
         <Navigator value={selectedReddit}
                 onChange={this.handleChange}
-                options={[ 'reactjs', 'frontend' ]} />
+                options={[ 'reactjs', 'frontend', 'MachineLearning' ]} />
       </div>
     )
   }
